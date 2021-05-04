@@ -1,5 +1,5 @@
 
-# importing os module
+# importing os modules
 import os
 import datetime
 Current_Date = datetime.datetime.today().strftime ('%d-%b-%Y')
