@@ -1,15 +1,18 @@
 
-# importing os modules
+# importing os module
 import os
-import datetime
-Current_Date = datetime.datetime.today().strftime ('%d-%b-%Y')
+#import datetime
+#Current_Date = datetime.datetime.today().strftime ('%d-%b-%Y')
 # Function to rename multiple files
 def main():
-  
-    for count, filename in enumerate(os.listdir("docs/")):
-        dst ="Ali" + str(count) + '_' + str((Current_Date)) + ".txt"
-        src ='docs/'+ filename
-        dst ='docs/'+ dst
+ path = input("Input path to directory: ")
+ f_Name = input("Enter the first part of the file name: ")
+ f_extension = input("Enter the file extension: ")
+
+ for count, filename in enumerate(os.listdir(path)):
+        dst = f_Name + '_' + str(count) + '.' +f_extension
+        src =path + filename
+        dst =path + dst
           
         # rename() function will
         # rename all the files
@@ -20,3 +23,4 @@ if __name__ == '__main__':
       
     # Calling main() function
     main()
+
